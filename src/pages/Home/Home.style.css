@@ -1,0 +1,31 @@
+.apresentation {
+  border-radius: 50%;
+  background-color: #ffffff18;
+  box-shadow:
+    0 0 60px 30px #ffffff10,  /* inner  */
+    0 0 100px 60px #ffffff08, /* middle fff */
+    0 0 140px 90px #ffffff06; /* outer fff */
+}
+
+.animated-arrow {
+animation: bounce 1s infinite ease-in-out;
+}
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  } 
+
+.nav-item {
+  border-bottom: 2px solid #ffffff20;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid #ffffff;
+}
