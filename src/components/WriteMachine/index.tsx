@@ -10,18 +10,17 @@ interface Props {
 const WriteMachine = ({ textToBeWritten }: Props) => {
   const [text, setText] = useState("");
 
-  // Helper function to simulate the typing effect
   const writingInTheDisplay = (text: string, i: number = 0) => {
     if (i < text.length) {
-      setText((prev) => prev + text[i]); // Append each character
-      setTimeout(() => writingInTheDisplay(text, i + 1), 100); // Recursively type out next character
+      setText((prev) => prev + text[i]);
+      setTimeout(() => writingInTheDisplay(text, i + 1), 20);
     }
   };
 
-  // Effect hook to initiate the typing when the component mounts
   useEffect(() => {
+    setText("");
     writingInTheDisplay(textToBeWritten);
-  }, [textToBeWritten]); // Dependency on `textToBeWritten`, rerun if it changes
+  }, [textToBeWritten]);
 
   return <>{text}</>;
 };

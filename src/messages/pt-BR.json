@@ -1,0 +1,14 @@
+{
+    "apresentation": {
+        "home": "Home",
+        "stacks": "Habilidades",
+        "repositories": "Repositorios",
+        "about": "Sobre",
+        "apresentation-title": "Olá, meu nome é",
+        "role": "Desenvolvedor de software"
+    },
+    "languageSwitcher": {
+        "en-US": "Inglês",
+        "pt-BR": "Português"
+    }
+}
