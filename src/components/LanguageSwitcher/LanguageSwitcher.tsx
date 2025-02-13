@@ -1,14 +1,15 @@
 "use client";
 import { useChangeLanguage } from "@/hooks/useChangeLanguage";
 import { getUserLocale } from "@/services/locale";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 const LOCALES = {
   EN: "en-US",
@@ -46,18 +47,20 @@ const LanguageSwitcher: React.FC = () => {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger>
-        {`${renderLocaleWithFlag(locale)} ${t(locale)}`}
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
+    <Select onValueChange={handleLanguageChange} defaultValue="en-US">
+      <SelectTrigger className="w-[180px] bg-black opacity-50 p-2 rounded-xl border-black">
+        <SelectValue
+          placeholder={`${renderLocaleWithFlag(locale)} ${t(locale)}`}
+        />
+      </SelectTrigger>
+      <SelectContent className="bg-black opacity-50 p-2 rounded-xl border-black">
         {Object.values(LOCALES).map((loc) => (
-          <DropdownMenuItem key={loc} onClick={() => handleLanguageChange(loc)}>
+          <SelectItem key={loc} value={loc}>
             {`${renderLocaleWithFlag(loc)} ${t(loc)}`}
-          </DropdownMenuItem>
+          </SelectItem>
         ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+      </SelectContent>
+    </Select>
   );
 };
 

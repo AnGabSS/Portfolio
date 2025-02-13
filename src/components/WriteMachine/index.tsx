@@ -1,5 +1,4 @@
-// At the top of your file
-"use client"; // This tells React that this file is a client component
+"use client";
 
 import { useEffect, useState } from "react";
 

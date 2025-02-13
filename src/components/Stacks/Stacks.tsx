@@ -2,7 +2,7 @@ import { SiTypescript } from "react-icons/si";
 
 const Stacks = () => {
   return (
-    <div className="flex flex-col justify-center align-middle mt-10">
+    <div className="flex flex-col justify-center align-middle mt-10 h-full">
       <h1 className="text-6xl font-bold">Stacks</h1>
       <div className="flex flex-row justify-center align-middle gap-10">
         <div className="flex flex-col justify-center align-middle">
