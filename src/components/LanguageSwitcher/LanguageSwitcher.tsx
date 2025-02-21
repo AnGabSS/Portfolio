@@ -46,6 +46,10 @@ const LanguageSwitcher: React.FC = () => {
     setLocale(newLocale);
   };
 
+  useEffect(() => {
+    handleLanguageChange("en-US");
+  }, []);
+
   return (
     <Select onValueChange={handleLanguageChange} defaultValue="en-US">
       <SelectTrigger className="w-[180px] bg-black opacity-50 p-2 rounded-xl border-black">

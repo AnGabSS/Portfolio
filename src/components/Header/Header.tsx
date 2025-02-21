@@ -1,3 +1,4 @@
+import { HeaderNavigationItems } from "@/interfaces/HeaderNavigationItems";
 import {
   faGithubAlt,
   faInstagram,
@@ -5,20 +6,51 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslations } from "next-intl";
+import { RefObject } from "react";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import "./Header.style.css";
 
-const Header = () => {
+interface HeaderProps {
+  refs: HeaderNavigationItems;
+}
+
+const Header = ({ refs }: HeaderProps) => {
   const t = useTranslations("apresentation");
+  const handleClick = (ref: RefObject<HTMLDivElement> | null): void => {
+    if (ref?.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
-    <header className="w-full flex flex-row justify-around flex-wrap p-4 mb-10">
+    <header className="w-full flex flex-row justify-around flex-wrap p-4 mb-10 gap-4">
       <nav className="flex flex-row gap-4">
-        <div className="border-b-2 text-md nav-item">{t("home")}</div>
-        <div className="border-b-2 text-md nav-item">{t("stacks")}</div>
-        <div className="border-b-2 text-md nav-item">{t("repositories")}</div>
-        <div className="border-b-2 text-md nav-item">{t("about")}</div>
+        <div
+          className="border-b-2 text-md nav-item"
+          onClick={() => handleClick(refs.home)}
+        >
+          {t("home")}
+        </div>
+        <div
+          className="border-b-2 text-md nav-item"
+          onClick={() => handleClick(refs.stacks)}
+        >
+          {t("stacks")}
+        </div>
+        <div
+          className="border-b-2 text-md nav-item"
+          onClick={() => handleClick(refs.repositories)}
+        >
+          {t("repositories")}
+        </div>
+        <div
+          className="border-b-2 text-md nav-item"
+          onClick={() => handleClick(refs.about)}
+        >
+          {t("about")}
+        </div>
       </nav>
-      <nav className="flex flex-row gap-4">
+      <nav className="flex  flex-row items-center justify-between gap-4">
         <a href="https://github.com/AnGabSS" target="_blank" rel="noreferrer">
           <FontAwesomeIcon
             icon={faGithubAlt}
@@ -48,8 +80,6 @@ const Header = () => {
             className="text-md"
           />
         </a>
-      </nav>
-      <nav className="flex flex-row gap-4">
         <LanguageSwitcher />
       </nav>
     </header>
