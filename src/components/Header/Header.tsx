@@ -23,7 +23,7 @@ const Header = ({ refs }: HeaderProps) => {
   };
 
   return (
-    <header className="w-full flex flex-row justify-around flex-wrap p-4 mb-10 gap-4">
+    <header className="w-full flex flex-row justify-around flex-wrap px-4 gap-4">
       <nav className="flex flex-row gap-4">
         <div
           className="border-b-2 text-md nav-item"

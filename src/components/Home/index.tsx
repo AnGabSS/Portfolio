@@ -16,7 +16,7 @@ const Home = ({ ref }: HomeProps) => {
   return (
     <section
       ref={ref}
-      className="flex flex-col w-screen h-dvh my-10 justify-center items-center gap-8 home-apresentation"
+      className="flex flex-col w-screen h-screen justify-center items-center gap-8 home-apresentation"
     >
       <article className="flex flex-col py-14 bg-white bg-opacity-10 rounded-lg apresentation">
         <p className="font-bold">{t("apresentation-title")}</p>

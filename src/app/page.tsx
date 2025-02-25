@@ -22,9 +22,9 @@ export default function App() {
   };
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center min-h-screen p-2 pb-20 gap-16 sm:p-5 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col  items-start justify-items-center  sm:p-5 font-[family-name:var(--font-geist-sans)]">
       <Header refs={headerNavigationRefs} />
-      <main className="flex flex-col h-screen justify-center align-middle gap-10 row-start-2">
+      <main className="flex flex-col justify-center align-middle">
         <Home ref={homeRef} />
         <Stacks ref={stacksRef} />
       </main>
