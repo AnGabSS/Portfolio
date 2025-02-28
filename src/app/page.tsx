@@ -1,7 +1,9 @@
 "use client";
+import Biography from "@/components/Biography/Biography";
 import Header from "@/components/Header/Header";
 import Home from "@/components/Home";
 import Repositories from "@/components/Repositories/Repositories";
+import SectionWraper from "@/components/SectionWraper/SectionWraper";
 import Stacks from "@/components/Stacks/Stacks";
 import { HeaderNavigationItems } from "@/interfaces/HeaderNavigationItems";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -28,8 +30,18 @@ export default function App() {
       <Header refs={headerNavigationRefs} />
       <main className="w-full justify-center align-middle">
         <Home ref={homeRef} />
-        <Stacks ref={stacksRef} />
-        <Repositories />
+        <SectionWraper ref={stacksRef} titlePath="apresentation.stacks">
+          <Stacks />
+        </SectionWraper>
+        <SectionWraper
+          ref={repositoriesRef}
+          titlePath="apresentation.repositories"
+        >
+          <Repositories />
+        </SectionWraper>
+        <SectionWraper ref={aboutRef} titlePath="apresentation.about">
+          <Biography />
+        </SectionWraper>
       </main>
     </div>
   );

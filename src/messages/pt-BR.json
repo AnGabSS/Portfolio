@@ -11,5 +11,41 @@
         "en-US": "Inglês",
         "pt-BR": "Português"
     },
-    "stacks": "Habilidades"
+    "about": {
+        "biography": "Olá, sou um desenvolvedor full-stack / back-end apaixonado por tecnologia e desenvolvimento de software, sempre buscando soluções inovadoras, escaláveis e de alta performance.",
+        "experience": "Experiência",
+        "jobs": [
+            {
+                "title": "Analista de Sistemas",
+                "company": "Nulog",
+                "date": "02/2025 - Presente",
+                "description": "Atuo no suporte, desenvolvimento e integração de sistemas, utilizando C#, JavaScript, Python, PostgreSQL, HTML e CSS para criar soluções eficientes e automações. Participo de reuniões com colaboradores técnicos para alinhamento e melhoria contínua. Minhas responsabilidades incluem suporte técnico, desenvolvimento e manutenção de sistemas, monitoramento de integrações, manipulação de relatórios, gestão de bancos de dados e configuração de equipamentos. Sempre busco aprimorar processos e entregar soluções escaláveis e de alto impacto."
+            },              
+            {
+                "title": "Desenvolvedor Full-Stack",
+                "company": "Ebravo Consultoria e Serviços em Informática",
+                "date": "08/2024 - 02/2025",
+                "description": "Responsável pelo desenvolvimento de aplicações web escaláveis utilizando React, Node.js, Express, Docker e MySQL. Atuo na criação de interfaces interativas, construção de APIs robustas e integração com bancos de dados. Utilizo Docker para otimizar ambientes de desenvolvimento e trabalho de forma colaborativa para garantir a entrega de soluções de alta qualidade."
+            }, 
+            {
+                "title": "Estagiário em Desenvolvimento de Software",
+                "company": "Ebravo Consultoria e Serviços em Informática",
+                "date": "04/2024 - 08/2024",
+                "description": "Atuei no desenvolvimento e manutenção de aplicações web utilizando React e Node.js. Minhas responsabilidades incluíram a criação de interfaces responsivas, implementação de APIs, testes e depuração de código. Trabalhei de forma colaborativa com a equipe para desenvolver soluções tecnológicas e aprimorar a experiência do usuário. Esse estágio me proporcionou uma compreensão sólida das práticas de desenvolvimento full-stack em um ambiente profissional dinâmico."
+            }              
+        ],
+        "education": "Educação",
+        "courses": [
+            {
+                "title": "Análise e Desenvolvimento de Sistemas",
+                "institution": "FIAP - Faculdade de Informática e Administração Paulista",
+                "date": "2023 - 2024"
+            },
+            {
+                "title": "Técnico em Eletrônica",
+                "institution": "Etec Presidente Vargas",
+                "date": "2020 - 2022"
+            }            
+        ]
+    }
 }

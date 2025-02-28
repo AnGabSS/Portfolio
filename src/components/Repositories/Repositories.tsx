@@ -27,53 +27,51 @@ const Repositories = () => {
     );
 
   return (
-    <article className="w-full flex flex-col items-center justify-center">
-      <h1 className="text-6xl  font-bold my-16">Repositories</h1>
-      <Carousel
-        opts={{
-          align: "start",
-          loop: false,
-          dragFree: true,
-          duration: 8000,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 1000,
-          }),
-        ]}
-        className="p-6 w-[90%] "
-      >
-        <CarouselContent className="-ml-1 gap-2">
-          {groupedRepositories?.map(
-            (repo: GitHubRepository[], index: number) => {
-              return (
-                <CarouselItem
-                  key={index}
-                  className="flex flex-col md:basis-1/2 lg:basis-1/4"
-                >
-                  {repo.map((repo: GitHubRepository, index: number) => {
-                    return (
-                      <Link href={repo.html_url} className="p-1" key={index}>
-                        <Card className="h-[40dvh] bg-gray-700 bg-opacity-50 rounded-xl">
-                          <CardContent className="h-[100%] w-full flex flex-col items-center justify-center p-6 gap-10">
-                            <h2 className="text-3xl text-center font-bold my-6 py-6">
-                              {repo.name}
-                            </h2>
-                            <p className="text-xl my-6 py-6">
-                              {repo.description}
-                            </p>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    );
-                  })}
-                </CarouselItem>
-              );
-            }
-          )}
-        </CarouselContent>
-      </Carousel>
-    </article>
+    <Carousel
+      opts={{
+        align: "start",
+        loop: false,
+        dragFree: true,
+        duration: 8000,
+      }}
+      plugins={[
+        Autoplay({
+          delay: 1000,
+        }),
+      ]}
+      className="py-6 w-full"
+    >
+      <CarouselContent className="h-full py-10 -ml-1 gap-2">
+        {groupedRepositories?.map((repo: GitHubRepository[], index: number) => {
+          return (
+            <CarouselItem
+              key={index}
+              className="h-full flex flex-col md:basis-1/2 lg:basis-1/4 gap-4"
+            >
+              {repo.map((repo: GitHubRepository, index: number) => {
+                return (
+                  <Link href={repo.html_url} className="p-1" key={index}>
+                    <Card
+                      className="h-[40dvh] bg-gradient-to-br from-zinc-600/75 to-zinc-800/25 rounded-xl shadow-xl transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105 cursor-pointer rounded-xl hover:drop-shadow-2xl hover:shadow-2xl 
+                        "
+                    >
+                      <CardContent className="h-[100%] w-full flex flex-col items-center justify-center p-6">
+                        <h2 className="text-xl w-[100%] lg:text-3xl text-center font-bold p-6 text-wrap flex-wrap break-all mt-2">
+                          {repo.name}
+                        </h2>
+                        <p className="text-md lg:text-lg mb-2 overflow-hidden text-ellipsis">
+                          {repo.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
+              })}
+            </CarouselItem>
+          );
+        })}
+      </CarouselContent>
+    </Carousel>
   );
 };
 

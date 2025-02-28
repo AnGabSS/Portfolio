@@ -11,5 +11,41 @@
         "en-US": "English",
         "pt-BR": "Portuguese"
     },
-    "stacks": "Stacks"
+    "about": {
+        "biography": "Hello, I'm a full-stack / back-end developer passionate about technology and software development, always striving for innovative, scalable, and high-performance solutions.",
+        "experience": "Experience",
+        "jobs": [
+            {
+                "title": "Systems Analyst",
+                "company": "Nulog",
+                "date": "02/2025 - Present",
+                "description": "I work in system support, development, and integration, using C#, JavaScript, Python, PostgreSQL, HTML, and CSS to create efficient solutions and automation. I participate in meetings with technical collaborators to ensure alignment and continuous improvement. My responsibilities include technical support, system development and maintenance, integration monitoring, report manipulation, database management, and equipment configuration. I am always looking to optimize processes and deliver scalable, high-impact solutions."
+            },
+            {
+                "title": "Full-Stack Developer",
+                "company": "Ebravo Consulting and IT Services",
+                "date": "08/2024 - 02/2025",
+                "description": "Responsible for developing scalable web applications using React, Node.js, Express, Docker, and MySQL. I worked on creating interactive user interfaces, building robust APIs, and integrating with databases. I used Docker to optimize development environments and collaborated with the team to ensure high-quality solution delivery."
+            },
+            {
+                "title": "Software Development Intern",
+                "company": "Ebravo Consulting and IT Services",
+                "date": "04/2024 - 08/2024",
+                "description": "I worked on developing and maintaining web applications using React and Node.js. My responsibilities included creating responsive interfaces, implementing APIs, testing, and debugging code. I collaborated with the team to develop technology solutions and enhance the user experience. This internship gave me a solid understanding of full-stack development practices in a dynamic professional environment."
+            }
+        ],
+        "education": "Education",
+        "courses": [
+            {
+                "title": "Systems analysis and development",
+                "institution": "FIAP - Faculdade de Informática e Administração Paulista",
+                "date": "2023 - 2024"
+            },
+            {
+                "title": "Electronics Technician",
+                "institution": "Etec Presidente Vargas",
+                "date": "2020 - 2022"
+            }
+        ]
+    }     
 }
