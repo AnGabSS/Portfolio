@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+// app/layout.tsx
+import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
-
-import "./globals.css";
-
 import { JetBrains_Mono } from "next/font/google";
+import { ReactQueryProvider } from "./QueryClientProvider"; // Importa o novo provider
+import "./globals.css";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -22,16 +22,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const locale = await getLocale();
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
       <body className={`${jetBrainsMono.className} antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ReactQueryProvider>{children}</ReactQueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>

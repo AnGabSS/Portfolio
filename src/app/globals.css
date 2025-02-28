@@ -20,15 +20,12 @@ body {
   background-image: url("@/public/assets/images/background.jpg");
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
-  position: relative; 
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 body::before {
   content: "";
-  position: relative;
-  background: inherit; 
   filter: blur(4px);
-  z-index: -1;
+
 }
