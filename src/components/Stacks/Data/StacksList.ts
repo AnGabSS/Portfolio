@@ -1,15 +1,15 @@
-import csharpLogo from "@/public/assets/images/stacks/backend/csharp.svg";
-import javaLogo from "@/public/assets/images/stacks/backend/java.svg";
-import nodejsLogo from "@/public/assets/images/stacks/backend/nodejs.svg";
-import mongodbLogo from "@/public/assets/images/stacks/database/mongodb.svg";
-import mysqlLogo from "@/public/assets/images/stacks/database/mysql.svg";
-import postgresLogo from "@/public/assets/images/stacks/database/postgresql.svg";
-import awsLogo from "@/public/assets/images/stacks/devops/aws.svg";
-import dockerLogo from "@/public/assets/images/stacks/devops/docker.svg";
-import kubernetesLogo from "@/public/assets/images/stacks/devops/kubernetes.svg";
-import nextLogo from "@/public/assets/images/stacks/frontend/nextjs.svg";
-import reactLogo from "@/public/assets/images/stacks/frontend/react.png";
-import typescriptLogo from "@/public/assets/images/stacks/frontend/typescript.png";
+import csharpLogo from "public/assets/images/stacks/backend/csharp.svg";
+import javaLogo from "public/assets/images/stacks/backend/java.svg";
+import nodejsLogo from "public/assets/images/stacks/backend/nodejs.svg";
+import mongodbLogo from "public/assets/images/stacks/database/mongodb.svg";
+import mysqlLogo from "public/assets/images/stacks/database/mysql.svg";
+import postgresLogo from "public/assets/images/stacks/database/postgresql.svg";
+import awsLogo from "public/assets/images/stacks/devops/aws.svg";
+import dockerLogo from "public/assets/images/stacks/devops/docker.svg";
+import kubernetesLogo from "public/assets/images/stacks/devops/kubernetes.svg";
+import nextLogo from "public/assets/images/stacks/frontend/nextjs.svg";
+import reactLogo from "public/assets/images/stacks/frontend/react.png";
+import typescriptLogo from "public/assets/images/stacks/frontend/typescript.png";
 
 interface TechInterface {
   name: string;

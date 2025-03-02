@@ -1,9 +1,9 @@
 import WriteMachine from "@/components/WriteMachine";
-import terminal from "@/public/assets/images/coding.png";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import terminal from "public/assets/images/coding.png";
 import { RefObject } from "react";
 import "./Home.style.css";
 
